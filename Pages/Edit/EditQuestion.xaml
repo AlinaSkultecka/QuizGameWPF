@@ -7,39 +7,40 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" 
              d:DesignWidth="360" 
-             Background="LightBlue" 
-             HorizontalAlignment="Center" 
-             VerticalAlignment="Center">
+             Background="LightBlue">
 
-    <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-
-            <!-- Menu line -->
-            <Rectangle 
-                 x:Name="MenuLine" 
-                 Margin="-25,-180,-25,235"
-                 Fill="White" 
-                 />
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Background="White">
             <Button Content="Return to Menu" 
-                Margin="209,-118,0,0"
-                VerticalAlignment="Top" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right"
                 Background="White" 
                 BorderThickness="0" 
                 FontWeight="Bold" 
+                Margin="0,0,10,0"
                 Click="ReturnToMenu_Click" Height="20"
                 />
+        </Grid>
 
-            <!-- Heading row-->
-            <Grid Grid.Row="0" Margin="0">
-                <TextBox 
+        <Grid Grid.Row="1">
+            <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Heading row-->
+                    <Grid Grid.Row="0" Margin="0">
+                        <TextBox 
                     TextWrapping="Wrap" 
                     Text="Question editing" 
                     FontSize="20"
@@ -48,46 +49,48 @@
                     HorizontalAlignment="Center" 
                     BorderThickness="0" 
                     />
-            </Grid>
+                    </Grid>
 
-            <!-- Play row -->
-            <Grid Grid.Row="1" Margin="20,5,20,5">
-                <Button Content="Find question by ID" FontWeight="Bold" FontSize="14">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Grid>
+                    <!-- Play row -->
+                    <Grid Grid.Row="1" Margin="20,5,20,5">
+                        <Button Content="Find question by ID" FontWeight="Bold" FontSize="14">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
 
-            <!-- Edit question row -->
-            <Grid Grid.Row="2" Margin="20,5,20,5">
-                <Button Content="Find question by category" FontWeight="Bold" FontSize="14">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Grid>
+                    <!-- Edit question row -->
+                    <Grid Grid.Row="2" Margin="20,5,20,5">
+                        <Button Content="Find question by category" FontWeight="Bold" FontSize="14">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
 
-            <!-- Add new question row -->
-            <Grid Grid.Row="3" Margin="20,5,20,5">
-                <Button Content="List all questions" FontWeight="Bold" FontSize="14">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Grid>
+                    <!-- Add new question row -->
+                    <Grid Grid.Row="3" Margin="20,5,20,5">
+                        <Button Content="List all questions" FontWeight="Bold" FontSize="14">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Border>
         </Grid>
-     </Border>
+    </Grid>
 </UserControl>

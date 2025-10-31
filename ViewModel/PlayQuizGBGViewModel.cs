@@ -13,8 +13,6 @@ using QuizGameWPF.Models;
 
 namespace QuizGameWPF.ViewModel
 {
-    // Fix for CS8618: Make CurrentQuestion nullable and PropertyChanged event nullable
-
     public class PlayQuizGBGViewModel : INotifyPropertyChanged
     {
         public Quiz Quiz { get; set; }
@@ -91,19 +89,29 @@ namespace QuizGameWPF.ViewModel
             }
         }
 
+        public event EventHandler OnGameOver;
         public void NextQuestion(int selectedIndex)
         {
             TotalAnswered++;
+            // Check if the selected answer is correct
             if (CurrentQuestion != null && CurrentQuestion.IsCorrect(selectedIndex))
             {
                 CorrectAnswers++;
             }
-
+            
+            // Get the next question
             CurrentQuestion = Quiz.GetRandomeQuestion();
+            
+            // If no more questions, raise game over event
+            if (CurrentQuestion == null)
+            {
+                // Game over!
+                OnGameOver?.Invoke(this, EventArgs.Empty);
+                return;
+            }
             OnPropertyChanged("CurrentQuestion");
             OnPropertyChanged("ScoreText");
             OnPropertyChanged("Category");
         }
-
     }
 }

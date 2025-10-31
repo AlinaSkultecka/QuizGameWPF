@@ -7,38 +7,38 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" 
              d:DesignWidth="360" 
-             Background="LightBlue" 
-             HorizontalAlignment="Center" 
-             VerticalAlignment="Center">
-
-    <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
-
-            <!-- Menu line -->
-            <Rectangle 
-         x:Name="MenuLine" 
-         Margin="-25,-191,-25,246"
-         Fill="White" 
-         />
-
+             Background="LightBlue">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="White">
             <Button Content="Return to Menu" 
-                    Margin="209,-136,0,0"
-                    VerticalAlignment="Top" 
-                    Background="White" 
-                    BorderThickness="0" 
-                    FontWeight="Bold" 
-                    Click="ReturnToMenu_Click" Height="20"
-                    />
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right"
+                Background="White" 
+                BorderThickness="0" 
+                FontWeight="Bold" 
+                Margin="0,0,10,0"
+                Click="ReturnToMenu_Click" Height="20"
+                />
+        </Grid>
+        <Grid Grid.Row="1">
 
-            <!-- Heading row-->
-            <Grid Grid.Row="0" Grid.ColumnSpan="2">
-                <TextBox 
+            <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Heading row-->
+                    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                        <TextBox 
                     TextWrapping="Wrap" 
                     Margin="30"
                     TextAlignment="Center"
@@ -49,33 +49,35 @@
                     HorizontalAlignment="Center" 
                     BorderThickness="0"
                     />
-            </Grid>
+                    </Grid>
 
-            <!-- GBG quiz row -->
-            <Grid Grid.Row="1" Margin="20,5,20,5">
-                <Button Content="Play Gothenburg quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Grid>
+                    <!-- GBG quiz row -->
+                    <Grid Grid.Row="1" Margin="20,5,20,5">
+                        <Button Content="Play Gothenburg quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
 
-            <!-- The rest quizes row -->
-            <Grid Grid.Row="2" Margin="20,5,20,5">
-                <Button Content="Play randome user created quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Grid>
+                    <!-- The rest quizes row -->
+                    <Grid Grid.Row="2" Margin="20,5,20,5">
+                        <Button Content="Play randome user created quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Border>
         </Grid>
-    </Border>
+    </Grid>
 </UserControl>

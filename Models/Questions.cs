@@ -9,11 +9,11 @@ namespace QuizGameWPF.Models
     public class Questions
     {
         public int ID { get; set; }
-        public string CreatedDate { get; set; }
-        public string EditedDate { get; set; }
-        public string Category { get; set; }
-        public string QuestionText { get; set; }
-        public string[] Answers { get; set; }
+        public string CreatedDate { get; set; } = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        public string EditedDate { get; set; } = "";
+        public string Category { get; set; } = string.Empty;
+        public string QuestionText { get; set; } = string.Empty;
+        public string[] Answers { get; set; } = Array.Empty<string>();
         public int CorrectAnswerIndex { get; set; }
 
         public Questions() { }
@@ -24,8 +24,8 @@ namespace QuizGameWPF.Models
             string questionText,
             int correctAnswerIndex,
             string[] answers,
-            string createdDate = null,
-            string editedDate = ""
+            string createdDate,
+            string editedDate
         )
         {
             ID = id;

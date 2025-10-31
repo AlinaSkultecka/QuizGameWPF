@@ -8,7 +8,6 @@ namespace QuizGameWPF.Helpers
 {
     public static class QuizSaver
     {
-        // Your desired path:
         private static readonly string filePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\QuizAddedByUser.json";
 
         public static void SaveQuiz(Quiz quiz)

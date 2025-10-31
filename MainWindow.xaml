@@ -8,6 +8,6 @@
 
     <Grid>
         <!-- This ContentControl will host either MainMenuView or PlayQuizView -->
-        <ContentControl x:Name="MainContent"/>
+        <ContentControl x:Name="MainContent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>

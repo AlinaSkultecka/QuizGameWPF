@@ -13,7 +13,7 @@ namespace QuizGameWPF.Models
         public List<Questions> Questions { get; set; }
 
         [JsonIgnore]
-        private List<Questions> _remainingQuestions;
+        private List<Questions>? _remainingQuestions;  //private internal field to store data inside the class
 
         [JsonIgnore]
         public Random Randomizer { get; set; }
@@ -24,21 +24,19 @@ namespace QuizGameWPF.Models
             QuizTitle = quizTitle;
             Questions = new List<Questions>();
             Randomizer = new Random();
-            _remainingQuestions = new List<Questions>();
+            _remainingQuestions = null;
         }
 
-        /// <summary>
-        /// Returns one random question that hasn't been used yet.
-        /// When all are used, returns null.
-        /// </summary>
+        // Returns one random question that hasn't been used yet.
+        // When all are used, returns null.
         public Questions? GetRandomeQuestion()
         {
-            // If this is the first call or all used up, reset
-            if (_remainingQuestions == null || _remainingQuestions.Count == 0)
+            // Only refill ONCE, at the start
+            if (_remainingQuestions == null)
             {
-                _remainingQuestions = new List<Questions>(Questions);
-                // Optional: shuffle the list for better randomness
-                _remainingQuestions = _remainingQuestions.OrderBy(q => Randomizer.Next()).ToList();
+                _remainingQuestions = new List<Questions>(Questions)
+                    .OrderBy(q => Randomizer.Next())
+                    .ToList();
             }
 
             if (_remainingQuestions.Count == 0)

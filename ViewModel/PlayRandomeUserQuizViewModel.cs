@@ -47,11 +47,11 @@ namespace QuizGameWPF.ViewModel
 
                     if (quizzes != null && quizzes.Count > 0)
                     {
-                        // ✅ Pick a random quiz from the list
+                        // Pick a random quiz from the list
                         var random = new Random();
                         Quiz = quizzes[random.Next(quizzes.Count)];
 
-                        // ✅ Pick a random question from the chosen quiz
+                        // Pick a random question from the chosen quiz
                         CurrentQuestion = Quiz.GetRandomeQuestion();
                         OnPropertyChanged(nameof(QuizTitle));
                     }
@@ -91,15 +91,26 @@ namespace QuizGameWPF.ViewModel
             }
         }
 
+        public event EventHandler OnGameOver;
         public void NextQuestion(int selectedIndex)
         {
             TotalAnswered++;
+            // Check if the selected answer is correct
             if (CurrentQuestion != null && CurrentQuestion.IsCorrect(selectedIndex))
             {
                 CorrectAnswers++;
             }
 
+            // Get the next question
             CurrentQuestion = Quiz.GetRandomeQuestion();
+
+            // If no more questions, raise game over event
+            if (CurrentQuestion == null)
+            {
+                // Game over!
+                OnGameOver?.Invoke(this, EventArgs.Empty);
+                return;
+            }
             OnPropertyChanged("CurrentQuestion");
             OnPropertyChanged("ScoreText");
             OnPropertyChanged("Category");

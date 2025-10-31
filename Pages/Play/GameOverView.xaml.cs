@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace QuizGameWPF.Pages.Play
 {
-    /// <summary>
-    /// Interaction logic for GameOverView.xaml
-    /// </summary>
     public partial class GameOverView : UserControl
     {
         public PlayQuizGBGViewModel ViewModelGBG { get; set; }
@@ -33,15 +30,6 @@ namespace QuizGameWPF.Pages.Play
         public static readonly DependencyProperty FinalScoreProperty =
             DependencyProperty.Register("FinalScore", typeof(string), typeof(GameOverView), new PropertyMetadata(""));
 
-        public GameOverView()
-        {
-            InitializeComponent();            
-            ViewModelGBG = new PlayQuizGBGViewModel();
-            DataContext = ViewModelGBG;
-
-            ViewModelRandome = new PlayRandomeUserQuizViewModel();
-            DataContext = ViewModelRandome;
-        }
         public GameOverView(string scoreText)
         {
             InitializeComponent();

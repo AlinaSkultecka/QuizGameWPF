@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using QuizGameWPF.Models;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace QuizGameWPF
@@ -8,6 +9,9 @@ namespace QuizGameWPF
         public MainMenuView()
         {
             InitializeComponent();
+
+            if (UserSession.CurrentUser != null)
+                UserNameText.Text = $"Welcome to QUIZ game, {UserSession.CurrentUser.UserName}";
         }
 
         private void Play_Click(object sender, RoutedEventArgs e)

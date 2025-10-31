@@ -9,7 +9,8 @@ namespace QuizGameWPF
         public MainWindow()
         {
             InitializeComponent();
-            ShowMainMenu(); // Start on menu
+            MainContent.Content = new QuizGameWPF.Pages.UserEntrance.UserEntranceView();
+
         }
 
         public void ShowMainMenu()

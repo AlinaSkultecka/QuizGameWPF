@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="QuizGameWPF.Pages.Play.GameOverView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizGameWPF.Pages.Play"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" 
+             d:DesignWidth="360" 
+             Background="LightBlue" 
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center">
+
+    <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Menu line -->
+            <Rectangle 
+         x:Name="MenuLine" 
+         Margin="-25,-191,-25,246"
+         Fill="White" 
+         />
+
+            <Button Content="Return to Menu" 
+                    Margin="209,-136,0,0"
+                    VerticalAlignment="Top" 
+                    Background="White" 
+                    BorderThickness="0" 
+                    FontWeight="Bold" 
+                    Click="ReturnToMenu_Click" Height="20"
+                    />
+
+            <!-- Heading row-->
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <TextBox 
+                    TextWrapping="Wrap" 
+                    Margin="30"
+                    TextAlignment="Center"
+                    Text="Game is over" 
+                    FontSize="22"
+                    FontWeight="Bold" 
+                    VerticalAlignment="Bottom" 
+                    HorizontalAlignment="Center" 
+                    BorderThickness="0"
+                    />
+            </Grid>
+            
+            <!-- Score row -->
+            <Grid Grid.Row="2" Margin="20,5,20,5">
+                <TextBox 
+                    TextWrapping="Wrap" 
+                    TextAlignment="Center"
+                    Text="Your score: {Binding ScoreText}" 
+                    FontSize="18"
+                    FontWeight="Bold" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    BorderThickness="0"
+                    />
+            </Grid>
+            
+            <!-- GBG quiz row -->
+            <Grid Grid.Row="2" Margin="20,5,20,5">
+                <Button Content="Play again Gothenburg quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!-- The rest quizes row -->
+            <Grid Grid.Row="3" Margin="20,5,20,5">
+                <Button Content="Play another randome quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

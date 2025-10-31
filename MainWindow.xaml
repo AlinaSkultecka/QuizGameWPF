@@ -1,0 +1,13 @@
+﻿<Window x:Class="QuizGameWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:QuizGameWPF"
+        Title="MainWindow"
+        Height="640" Width="360"
+        Background="LightBlue">
+
+    <Grid>
+        <!-- This ContentControl will host either MainMenuView or PlayQuizView -->
+        <ContentControl x:Name="MainContent"/>
+    </Grid>
+</Window>

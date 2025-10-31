@@ -37,7 +37,7 @@ namespace QuizGameWPF.ViewModel
 
         public PlayQuizGBGViewModel()
         {
-            string filePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\QuizGBGEnglish.json";
+            string filePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\AppData\QuizGBGEnglish.json";
 
             try
             {

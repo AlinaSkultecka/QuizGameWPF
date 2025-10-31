@@ -13,7 +13,8 @@
           "Paris",
           "Madrid"
         ],
-        "CorrectAnswerIndex": 1
+        "CorrectAnswerIndex": 1,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 2,
@@ -26,7 +27,8 @@
           "Mars",
           "Jupiter"
         ],
-        "CorrectAnswerIndex": 1
+        "CorrectAnswerIndex": 1,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 3,
@@ -39,7 +41,8 @@
           "6",
           "7"
         ],
-        "CorrectAnswerIndex": 2
+        "CorrectAnswerIndex": 2,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 4,
@@ -52,7 +55,8 @@
           "Indian Ocean",
           "Pacific Ocean"
         ],
-        "CorrectAnswerIndex": 2
+        "CorrectAnswerIndex": 2,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 5,
@@ -65,7 +69,8 @@
           "William Shakespeare",
           "Mark Twain"
         ],
-        "CorrectAnswerIndex": 1
+        "CorrectAnswerIndex": 1,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       }
     ]
   },
@@ -83,7 +88,8 @@
           "Carbon Dioxide",
           "Nitrogen"
         ],
-        "CorrectAnswerIndex": 1
+        "CorrectAnswerIndex": 1,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 2,
@@ -96,7 +102,8 @@
           "O2",
           "CO2"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 3,
@@ -109,7 +116,8 @@
           "8",
           "9"
         ],
-        "CorrectAnswerIndex": 1
+        "CorrectAnswerIndex": 1,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 4,
@@ -122,7 +130,8 @@
           "Ribosome",
           "Mitochondria"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 5,
@@ -135,7 +144,8 @@
           "150,000 km/s",
           "450,000 km/s"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       }
     ]
   },
@@ -153,7 +163,8 @@
           "Computer Power Unit",
           "Central Program Utility"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 2,
@@ -166,7 +177,8 @@
           "Steve Jobs",
           "Elon Musk"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 3,
@@ -179,7 +191,8 @@
           "High Transfer Text Program",
           "HyperTool Transfer Package"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 4,
@@ -192,7 +205,8 @@
           "Swift",
           "C#"
         ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 0,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       },
       {
         "ID": 5,
@@ -205,56 +219,8 @@
           "2007",
           "2010"
         ],
-        "CorrectAnswerIndex": 1
-      }
-    ]
-  },
-  {
-    "QuizTitle": "test",
-    "Questions": [
-      {
-        "ID": 1,
-        "CreatedDate": "2025-10-30 16:15:44",
-        "EditedDate": null,
-        "Category": "User\u0027s question",
-        "QuestionText": "is that a test?",
-        "Answers": [
-          "yes",
-          "no",
-          "maybe"
-        ],
-        "CorrectAnswerIndex": 0
-      }
-    ]
-  },
-  {
-    "QuizTitle": "vfdbfdb",
-    "Questions": [
-      {
-        "ID": 1,
-        "CreatedDate": "2025-10-31 12:46:54",
-        "EditedDate": "",
-        "Category": "User\u0027s question",
-        "QuestionText": "bfdb",
-        "Answers": [
-          "sbb",
-          "dsfd",
-          "bvn "
-        ],
-        "CorrectAnswerIndex": 2
-      },
-      {
-        "ID": 2,
-        "CreatedDate": "2025-10-31 12:47:04",
-        "EditedDate": "",
-        "Category": "User\u0027s question",
-        "QuestionText": "vfxdbdfs",
-        "Answers": [
-          "fdsfes",
-          "bvcb",
-          "\\sa"
-        ],
-        "CorrectAnswerIndex": 0
+        "CorrectAnswerIndex": 1,
+        "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\00.png"
       }
     ]
   }

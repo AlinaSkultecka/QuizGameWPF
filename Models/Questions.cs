@@ -15,6 +15,7 @@ namespace QuizGameWPF.Models
         public string QuestionText { get; set; } = string.Empty;
         public string[] Answers { get; set; } = Array.Empty<string>();
         public int CorrectAnswerIndex { get; set; }
+        public string? ImagePath { get; set; }
 
         public Questions() { }
 
@@ -25,7 +26,8 @@ namespace QuizGameWPF.Models
             int correctAnswerIndex,
             string[] answers,
             string createdDate,
-            string editedDate
+            string editedDate,
+            string? imagePath = null
         )
         {
             ID = id;
@@ -35,6 +37,7 @@ namespace QuizGameWPF.Models
             CorrectAnswerIndex = correctAnswerIndex;
             CreatedDate = createdDate ?? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             EditedDate = editedDate;
+            ImagePath = imagePath;
         }
 
         public bool IsCorrect(int selectedIndex)

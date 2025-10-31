@@ -29,6 +29,13 @@ namespace QuizGameWPF.Helpers
                 allQuizzes = new List<Quiz>();
             }
 
+            // SET DEFAULT IMAGE FOR ALL QUESTIONS HERE
+            string defaultImagePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\Images\00.png";
+            foreach (var question in quiz.Questions)
+            {
+                question.ImagePath = defaultImagePath;
+            }
+
             // (Add or replace quiz and write as before)
             allQuizzes.RemoveAll(q => q.QuizTitle == quiz.QuizTitle);
             allQuizzes.Add(quiz);

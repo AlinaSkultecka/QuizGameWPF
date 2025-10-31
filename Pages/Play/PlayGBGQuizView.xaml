@@ -87,7 +87,10 @@
                         </Grid>
 
                         <!-- Picture row -->
-                        <Grid Grid.Row="2" Margin="10,10,10,10" Grid.ColumnSpan="2">
+                        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                            <Image
+                               Source="{Binding CurrentQuestion.ImagePath}" 
+                               Stretch="Uniform"/>
                         </Grid>
 
                         <!-- Question row -->

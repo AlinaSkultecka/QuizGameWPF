@@ -11,7 +11,7 @@ namespace QuizGameWPF
             InitializeComponent();
 
             if (UserSession.CurrentUser != null)
-                UserNameText.Text = $"Welcome to QUIZ game, {UserSession.CurrentUser.UserName}";
+                UserNameText.Text = $"Hello, {UserSession.CurrentUser.UserName}";
         }
 
         private void Play_Click(object sender, RoutedEventArgs e)

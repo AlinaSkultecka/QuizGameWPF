@@ -36,7 +36,7 @@ namespace QuizGameWPF.ViewModel
 
         public PlayRandomeUserQuizViewModel()
         {
-            string filePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\QuizAddedByUser.json";
+            string filePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\AppData\Local\QuizAddedByUser.json";
 
             try
             {

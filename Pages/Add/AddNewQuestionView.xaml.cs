@@ -91,9 +91,20 @@ namespace QuizGameWPF
             string answer1 = Answer1Box.Text;
             string answer2 = Answer2Box.Text;
             string answer3 = Answer3Box.Text;
-            int correctIndex = int.Parse(CorrectIndexBox.Text);
 
-            // Create question
+            // Try to parse correct index, handle if not an integer
+            if (!int.TryParse(CorrectIndexBox.Text, out int correctIndex) ||
+                string.IsNullOrWhiteSpace(questionText) ||
+                string.IsNullOrWhiteSpace(answer1) ||
+                string.IsNullOrWhiteSpace(answer2) ||
+                string.IsNullOrWhiteSpace(answer3) ||
+                !(correctIndex >= 1 && correctIndex <= 3))
+            {
+                MessageBox.Show("Please fill out all fields and enter a correct answer index (1-3).");
+                return;
+            }
+
+            // Only create the question if validation passed!
             var newQuestion = new Questions
             {
                 ID = currentQuiz.Questions.Count + 1,
@@ -103,16 +114,6 @@ namespace QuizGameWPF
                 CreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
                 Category = "User's question"
             };
-
-            if (string.IsNullOrWhiteSpace(questionText) ||
-                string.IsNullOrWhiteSpace(answer1) ||
-                string.IsNullOrWhiteSpace(answer2) ||
-                string.IsNullOrWhiteSpace(answer3) ||
-                !(correctIndex >= 1 && correctIndex <= 3))
-            {
-                MessageBox.Show("Please fill out all fields and enter a correct answer index (1-3).");
-                return;
-            }
 
             currentQuiz.Questions.Add(newQuestion);
 

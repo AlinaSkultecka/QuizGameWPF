@@ -8,10 +8,16 @@ namespace QuizGameWPF.Helpers
 {
     public static class QuizSaver
     {
-        private static readonly string filePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\AppData\Local\QuizAddedByUser.json";
+        private static readonly string folderPath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "QuizGameWPF", "DataJSON");
 
+        private static readonly string filePath = Path.Combine(folderPath, "QuizAddedByUser.json");
         public static void SaveQuiz(Quiz quiz)
         {
+            // Creates the folder if it doesn't exist
+            Directory.CreateDirectory(folderPath);
+
             List<Quiz> allQuizzes;
 
             if (File.Exists(filePath))
@@ -30,7 +36,7 @@ namespace QuizGameWPF.Helpers
             }
 
             // SET DEFAULT IMAGE FOR ALL QUESTIONS HERE
-            string defaultImagePath = @"C:\Users\grigo\Desktop\C#\3_Labbs\QuizGameWPF\Images\00.png";
+            string defaultImagePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuizGameWPF", "Images", "00.png");
             foreach (var question in quiz.Questions)
             {
                 question.ImagePath = defaultImagePath;

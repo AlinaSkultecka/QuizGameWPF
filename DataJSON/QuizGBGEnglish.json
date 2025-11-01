@@ -13,7 +13,7 @@
         "Boqueria, Puta Madre, and Bot\u00E1nico"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\1.png"
+      "ImagePath": "Images/1.png"
     },
     {
       "ID": 2,
@@ -27,7 +27,7 @@
         "June"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\2.png"
+      "ImagePath": "Images/2.png"
     },
     {
       "ID": 3,
@@ -41,7 +41,7 @@
         "331 m"
       ],
       "CorrectAnswerIndex": 2,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\3.png"
+      "ImagePath": "Images/3.png"
     },
     {
       "ID": 4,
@@ -55,7 +55,7 @@
         "98 m"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\4.png"
+      "ImagePath": "Images/4.png"
     },
     {
       "ID": 5,
@@ -69,7 +69,7 @@
         "70 m"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\5.png"
+      "ImagePath": "Images/5.png"
     },
     {
       "ID": 6,
@@ -83,7 +83,7 @@
         "6,800 kg"
       ],
       "CorrectAnswerIndex": 2,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\6.png"
+      "ImagePath": "Images/6.png"
     },
     {
       "ID": 7,
@@ -97,7 +97,7 @@
         "1899"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\7.png"
+      "ImagePath": "Images/7.png"
     },
     {
       "ID": 8,
@@ -111,7 +111,7 @@
         "7"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\8.png"
+      "ImagePath": "Images/8.png"
     },
     {
       "ID": 9,
@@ -125,7 +125,7 @@
         "Carnegie Porter"
       ],
       "CorrectAnswerIndex": 2,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\9.png"
+      "ImagePath": "Images/9.png"
     },
     {
       "ID": 10,
@@ -139,7 +139,7 @@
         "Lejonet \u0026 Bj\u00F6rnen"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\10.png"
+      "ImagePath": "Images/10.png"
     },
     {
       "ID": 11,
@@ -153,7 +153,7 @@
         "H\u00F6n\u00F6"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\11.png"
+      "ImagePath": "Images/11.png"
     },
     {
       "ID": 12,
@@ -167,7 +167,7 @@
         "1936"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\12.png"
+      "ImagePath": "Images/12.png"
     },
     {
       "ID": 13,
@@ -181,7 +181,7 @@
         "Break to eat a fruit"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\13.png"
+      "ImagePath": "Images/13.png"
     },
     {
       "ID": 14,
@@ -195,7 +195,7 @@
         "10,000"
       ],
       "CorrectAnswerIndex": 2,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\14.png"
+      "ImagePath": "Images/14.png"
     },
     {
       "ID": 15,
@@ -209,7 +209,7 @@
         "January"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\15.png"
+      "ImagePath": "Images/15.png"
     },
     {
       "ID": 16,
@@ -223,7 +223,7 @@
         "25 million liters"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\16.png"
+      "ImagePath": "Images/16.png"
     },
     {
       "ID": 17,
@@ -237,7 +237,7 @@
         "1971"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\17.png"
+      "ImagePath": "Images/17.png"
     },
     {
       "ID": 18,
@@ -251,7 +251,7 @@
         "1979"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\18.png"
+      "ImagePath": "Images/18.png"
     },
     {
       "ID": 19,
@@ -265,7 +265,7 @@
         "1985"
       ],
       "CorrectAnswerIndex": 2,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\19.png"
+      "ImagePath": "Images/19.png"
     },
     {
       "ID": 20,
@@ -279,7 +279,7 @@
         "Tredje L\u00E5nggatan"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\20.png"
+      "ImagePath": "Images/20.png"
     },
     {
       "ID": 21,
@@ -293,7 +293,7 @@
         "1,800 m"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\21.png"
+      "ImagePath": "Images/21.png"
     },
     {
       "ID": 22,
@@ -307,7 +307,7 @@
         "1982"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\22.png"
+      "ImagePath": "Images/22.png"
     },
     {
       "ID": 23,
@@ -321,7 +321,7 @@
         "Majorna"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\23.png"
+      "ImagePath": "Images/23.png"
     },
     {
       "ID": 24,
@@ -335,7 +335,7 @@
         "Lithuania"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\24.png"
+      "ImagePath": "Images/24.png"
     },
     {
       "ID": 25,
@@ -349,7 +349,7 @@
         "Askim-Fr\u00F6lunda-H\u00F6gsbo, V\u00E4stra G\u00F6teborg"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\25.png"
+      "ImagePath": "Images/25.png"
     },
     {
       "ID": 26,
@@ -363,7 +363,7 @@
         "Ericsson"
       ],
       "CorrectAnswerIndex": 0,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\26.png"
+      "ImagePath": "Images/26.png"
     },
     {
       "ID": 27,
@@ -377,7 +377,7 @@
         "21"
       ],
       "CorrectAnswerIndex": 1,
-      "ImagePath": "C:\\Users\\grigo\\Desktop\\C#\\3_Labbs\\QuizGameWPF\\Images\\27.png"
+      "ImagePath": "Images/27.png"
     }
   ]
 }

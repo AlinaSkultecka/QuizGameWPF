@@ -20,6 +20,13 @@ namespace QuizGameWPF.Pages.Play
 
             ViewModelRandome = new PlayRandomeUserQuizViewModel();
             DataContext = ViewModelRandome;
+
+            // Disable play button if no user-created quizzes
+            PlayRandomUserQuizButton.IsEnabled = QuizGameWPF.Helpers.AppDataHelper.HasUserQuizzes();
+
+            PlayRandomUserQuizButton.Visibility = QuizGameWPF.Helpers.AppDataHelper.HasUserQuizzes()
+                ? Visibility.Visible
+                : Visibility.Collapsed;
         }
 
         private void ReturnToMenu_Click(object sender, RoutedEventArgs e)

@@ -80,7 +80,7 @@
 
                     <!-- The rest quizes row -->
                     <Grid Grid.Row="3" Margin="20,5,20,5">
-                        <Button Content="Play another randome quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
+                        <Button x:Name="PlayRandomUserQuizButton" Content="Play another randome quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="5" Background="{TemplateBinding Background}">

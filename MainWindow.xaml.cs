@@ -8,9 +8,11 @@ namespace QuizGameWPF
     {
         public MainWindow()
         {
+            // Make sure default data folder exists before showing main menu
+            QuizGameWPF.Helpers.AppDataHelper.EnsureAppDataFolder();
+
             InitializeComponent();
             MainContent.Content = new QuizGameWPF.Pages.UserEntrance.UserEntranceView();
-
         }
 
         public void ShowMainMenu()

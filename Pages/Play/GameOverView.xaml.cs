@@ -35,6 +35,12 @@ namespace QuizGameWPF.Pages.Play
             InitializeComponent();
             FinalScore = scoreText;
             DataContext = this; // Bind FinalScore to XAML
+
+            // Disable play button if no user-created quizzes
+            PlayRandomUserQuizButton.IsEnabled = QuizGameWPF.Helpers.AppDataHelper.HasUserQuizzes();
+            PlayRandomUserQuizButton.Visibility = QuizGameWPF.Helpers.AppDataHelper.HasUserQuizzes()
+                ? Visibility.Visible
+                : Visibility.Collapsed;
         }
 
         private void ReturnToMenu_Click(object sender, RoutedEventArgs e)

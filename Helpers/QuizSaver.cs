@@ -11,7 +11,7 @@ namespace QuizGameWPF.Helpers
         // Define folder and file paths (AppData\Local\QuizGameWPF\DataJSON\QuizAddedByUser.json)
         private static readonly string folderPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "QuizGameWPF", "DataJSON");
+            "QuizGameWPF", "DefaultData", "DataJSON");
         private static readonly string filePath = Path.Combine(folderPath, "QuizAddedByUser.json");
         
         public static void SaveQuiz(Quiz quiz)
@@ -37,12 +37,11 @@ namespace QuizGameWPF.Helpers
                 allQuizzes = new List<Quiz>();
             }
 
-            // SET DEFAULT IMAGE FOR ALL QUESTIONS HERE
-            string defaultImagePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuizGameWPF", "Images", "00.png");
-
+            // Set default image only if not already set
             foreach (var question in quiz.Questions)
             {
-                question.ImagePath = defaultImagePath;
+                if (string.IsNullOrWhiteSpace(question.ImagePath))
+                    question.ImagePath = "00.png"; // Only store the file name, not the full path
             }
 
             // Update or add the quiz

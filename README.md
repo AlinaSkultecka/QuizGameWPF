@@ -27,3 +27,5 @@ Players can **play**, **edit**, or **create** quiestions — all through separat
 
 - The questions about Gothenburg are taken from Höglund, B. (2023). GöteborgQuiz 2 : Har du koll på Göteborg? Ordalaget Bokförlag.
 
+### Wireframe of the program
+<img width="613" height="1125" alt="Wireframe" src="https://github.com/user-attachments/assets/137b13b1-96f0-41c3-9b54-199704fbe4c7" />

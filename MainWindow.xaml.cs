@@ -8,7 +8,7 @@ namespace QuizGameWPF
     {
         public MainWindow()
         {
-            // Make sure default data folder exists before showing main menu
+            // Checking if the default data folder exists on User`s computer (AppData\Local) before showing the Main Menu
             QuizGameWPF.Helpers.AppDataHelper.EnsureAppDataFolder();
 
             InitializeComponent();
@@ -20,19 +20,22 @@ namespace QuizGameWPF
             MainContent.Content = new MainMenuView();
         }
 
+        // Navigate to Play Quiz
         public void PlayChooseQuiz()
         {
             MainContent.Content = new PlayChooseQuizView();
         }
 
+        // Navigate to Add Quiz
         public void AddTitle()
         {
             MainContent.Content = new AddTitle();
         }
 
+        // Navigate to Edit Quiz
         public void EditQuestion()
         {
-            MainContent.Content = new EditQuestion();
+            MainContent.Content = new EditQuiz();
         }
     }
 }

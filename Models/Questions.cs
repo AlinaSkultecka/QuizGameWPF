@@ -14,7 +14,7 @@ namespace QuizGameWPF.Models
         public string EditedDate { get; set; } = "";
         public string Category { get; set; } = string.Empty;
         public string QuestionText { get; set; } = string.Empty;
-        public string[] Answers { get; set; } = Array.Empty<string>();
+        public List<string> Answers { get; set; } = new List<string>();
         public int CorrectAnswerIndex { get; set; }
         public string? ImagePath { get; set; }
 
@@ -48,7 +48,7 @@ namespace QuizGameWPF.Models
             string category,
             string questionText,
             int correctAnswerIndex,
-            string[] answers,
+            List<string> answers,
             string createdDate,
             string editedDate,
             string? imagePath = null
@@ -67,11 +67,6 @@ namespace QuizGameWPF.Models
         public bool IsCorrect(int selectedIndex)
         {
             return selectedIndex == CorrectAnswerIndex;
-        }
-
-        public override string ToString()
-        {
-            return $"{QuestionText} (Correct: {Answers[CorrectAnswerIndex]})";
         }
     }
 }

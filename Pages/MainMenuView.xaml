@@ -14,8 +14,7 @@
         <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="140"/>
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
@@ -23,21 +22,10 @@
                     <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
 
-                <!-- Heading row-->
-                <Grid Grid.Row="0" Margin="250,15,15,15">
-                    <Button Content="In Swedish" Margin="-20,0,0,-8">
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </Grid>
+                
 
                 <!-- Heading Welcome row-->
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="0">
                     <TextBlock TextWrapping="Wrap" 
                                Margin="25,0,25,0"
                                x:Name="UserNameText"
@@ -49,7 +37,7 @@
                                />
                 </Grid>
                 <!-- Heading What to do row-->
-                <Grid Grid.Row="2" Margin="15">
+                <Grid Grid.Row="1" Margin="15">
                     <TextBox TextWrapping="Wrap" 
                              Text="What do you want to do:" 
                              FontWeight="Bold" FontSize ="20" 
@@ -58,8 +46,8 @@
                 </Grid>
 
                 <!-- Play row -->
-                <Grid Grid.Row="3" Margin="20,5,20,5">
-                    <Button Content="Play a quiz" FontWeight="Bold" FontSize ="14" Click="Play_Click">
+                <Grid Grid.Row="2" Margin="20,5,20,5">
+                    <Button Content="Play a Quiz" FontWeight="Bold" FontSize ="14" Click="Play_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="5" Background="{TemplateBinding Background}">
@@ -71,8 +59,8 @@
                 </Grid>
 
                 <!-- Edit question row -->
-                <Grid Grid.Row="4" Margin="20,5,20,5">
-                    <Button Content="Edit existing quiz" FontWeight="Bold" FontSize ="14" Click="Edit_Question_Click">
+                <Grid Grid.Row="3" Margin="20,5,20,5">
+                    <Button Content="Edit existing Quiz" FontWeight="Bold" FontSize ="14" Click="Edit_Question_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="5" Background="{TemplateBinding Background}">
@@ -84,8 +72,8 @@
                 </Grid>
 
                 <!-- Add new question row -->
-                <Grid Grid.Row="5" Margin="20,5,20,5">
-                    <Button Content="Add new quiz" FontWeight="Bold" FontSize ="14" Click="Add_Question_Click">
+                <Grid Grid.Row="4" Margin="20,5,20,5">
+                    <Button Content="Add new Quiz" FontWeight="Bold" FontSize ="14" Click="Add_Question_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="5" Background="{TemplateBinding Background}">

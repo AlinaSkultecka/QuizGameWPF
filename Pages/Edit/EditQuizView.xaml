@@ -1,0 +1,374 @@
+﻿<UserControl x:Class="QuizGameWPF.EditQuiz"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizGameWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" 
+             d:DesignWidth="360" 
+             Background="LightBlue">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Background="White">
+            <Button Content="Return to Menu" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right"
+                Background="White" 
+                BorderThickness="0" 
+                FontWeight="Bold" 
+                Margin="0,0,10,0"
+                Click="ReturnToMenu_Click" Height="20"
+                />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Border Margin="15,15,15,15" CornerRadius="10" Background="White">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Heading row-->
+                    <Grid Grid.Row="0">
+                        <TextBox 
+                            TextWrapping="Wrap" 
+                            Text="Editing of user created Quizes" 
+                            FontSize="20"
+                            FontWeight="Bold" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center" 
+                            BorderThickness="0" 
+                            />
+                    </Grid>
+                   
+                    <!-- Choose the quiz row-->
+                    <Grid Grid.Row="1" Margin="20,5,20,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <!-- For the label -->
+                                <RowDefinition Height="Auto"/>
+                                <!-- For the ComboBox -->
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Choose Quiz"
+                                       FontWeight="Bold"
+                                       FontSize="14"
+                                       Margin="0,5,0,0"
+                                       Grid.Row="0"/>
+
+                            <ComboBox x:Name="QuizComboBox" 
+                                      SelectionChanged="QuizComboBox_SelectionChanged"
+                                      VerticalAlignment="Bottom" 
+                                      HorizontalAlignment="Stretch"
+                                      Grid.Row="1"/>
+                        </Grid>
+                    </Grid>
+
+                    <!-- Choose Question row -->
+                    <Grid Grid.Row="2" Margin="20,0,20,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <!-- For the label -->
+                                <RowDefinition Height="Auto"/>
+                                <!-- For the ComboBox -->
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Choose Question"
+                                       FontWeight="Bold"
+                                       FontSize="14"
+                                       Margin="0,5,0,0"
+                                       Grid.Row="0"
+                                       />
+
+                            <ComboBox x:Name="QuestionComboBox" 
+                                      SelectionChanged="QuestionComboBox_SelectionChanged"
+                                      VerticalAlignment="Bottom" 
+                                      HorizontalAlignment="Stretch"
+                                      Grid.Row="1"
+                                      />
+                        </Grid>
+                    </Grid>
+
+                    <!-- Question row-->
+                    <Grid Grid.Row="3" Margin="20,15,20,0">
+                        <TextBox 
+                                TextWrapping="Wrap" 
+                                Text="Edit Quiz Title" 
+                                FontWeight="Bold" 
+                                FontSize="14"
+                                VerticalAlignment="Bottom" 
+                                HorizontalAlignment="Left" 
+                                BorderThickness="0" 
+                                />
+                    </Grid>
+
+                    <!-- Question entrance row -->
+                    <Grid Grid.Row="4" Margin="20,0,20,0">
+                        <TextBox 
+                            x:Name="QuizTitleTextBox"
+                            TextWrapping="Wrap" 
+                            Text=""
+                            FontSize="14"
+                            Margin="0"
+                            Height="40"
+                            Padding="8"
+                            Background="LightGray">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+
+                    <!-- Question row-->
+                    <Grid Grid.Row="5" Margin="20,0,20,0">
+                        <TextBox 
+                            TextWrapping="Wrap" 
+                            Text="Edit Question" 
+                            FontWeight="Bold" 
+                            FontSize="14"
+                            VerticalAlignment="Bottom" 
+                            HorizontalAlignment="Left" 
+                            BorderThickness="0" 
+                            />
+                    </Grid>
+
+                    <!-- Question entrance row -->
+                    <Grid Grid.Row="6" Margin="20,0,20,0">
+                        <TextBox 
+                            x:Name="QuestionTextBox"
+                            TextWrapping="Wrap" 
+                            Text=""
+                            FontSize="14"
+                            Margin="0"
+                            Height="40"
+                            Padding="8"
+                            Background="LightGray">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+
+                    <!-- Answers Row-->
+                    <Grid Grid.Row="7" Margin="20,10,20,0">
+                        <TextBox 
+                            TextWrapping="Wrap" 
+                            Text="Edit the possible answers:" 
+                            FontSize="14"
+                            FontWeight="Bold" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left" 
+                            BorderThickness="0" 
+                            />
+                    </Grid>
+
+                    <!--1st Answer row -->
+                    <Grid Grid.Row="8" Margin="20,5,20,0" Grid.ColumnSpan="2" >
+                        <Grid.ColumnDefinitions>
+                            <!-- Number column -->
+                            <ColumnDefinition Width="30"/>
+                            <!-- TextBox column -->
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="1." 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"
+                               />
+                        <TextBox 
+                                x:Name="Answer1Box"
+                                Grid.Column="1"
+                                FontSize="14"
+                                TextWrapping="Wrap" 
+                                Text=""
+                                Margin="0"
+                                Height="40"
+                                Padding="8"
+                                Background="LightGray">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+
+                    <!--2nd Answer row -->
+                    <Grid Grid.Row="9" Margin="20,5,20,0" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <!-- Number column -->
+                            <ColumnDefinition Width="30"/>
+                            <!-- TextBox column -->
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="2." 
+                               FontSize="14"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"
+                               />
+                        <TextBox 
+                                x:Name="Answer2Box"
+                                Grid.Column="1"
+                                TextWrapping="Wrap" 
+                                FontSize="14"
+                                Text=""
+                                Margin="0"
+                                Height="40"
+                                Padding="8"
+                                Background="LightGray">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+
+                    <!--3rd Answer row -->
+                    <Grid Grid.Row="10" Margin="20,5,20,0" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <!-- Number column -->
+                            <ColumnDefinition Width="*"/>
+                            <!-- TextBox column -->
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="3." 
+                               FontSize="14"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"
+                               />
+                        <TextBox 
+                                x:Name="Answer3Box"
+                                Grid.Column="1"
+                                TextWrapping="Wrap" 
+                                FontSize="14"
+                                Text=""
+                                Margin="0"
+                                Height="40"
+                                Padding="8"
+                                Background="LightGray">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+
+                    <!-- Correct answer row -->
+                    <Grid Grid.Row="11" Margin="20,5,20,0" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="170"/>
+                            <!-- Number column -->
+                            <ColumnDefinition Width="*"/>
+                            <!-- TextBox column -->
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Enter the index number of the correct answer:"
+                                   TextWrapping="Wrap"
+                                   FontSize="14"
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"
+                                   />
+                        <TextBox 
+                            Grid.Column="1"
+                            TextWrapping="Wrap" 
+                            Text=""
+                            FontSize="14"
+                            x:Name="CorrectIndexBox"
+                            Margin="0"
+                            Height="40"
+                            Padding="8"
+                            Background="LightGray">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+
+                    <Grid Grid.Row="12" Margin="20,10,20,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Button Content="Save question"
+                                    FontSize="14"
+                                    VerticalAlignment="Top"
+                                    Background="LightGray"
+                                    BorderThickness="0"
+                                    FontWeight="Bold"
+                                    Click="SaveQuestion_Click"
+                                    Height="30"
+                                    Margin="10,0,10,0"
+                                    Grid.Column="0">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" 
+                                                CornerRadius="5" 
+                                                Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button Content="Delete question"
+                                    FontSize="14"
+                                    VerticalAlignment="Top"
+                                    Background="LightCoral"
+                                    BorderThickness="0"
+                                    FontWeight="Bold"
+                                    Click="DeleteQuestion_Click"
+                                    Height="30"
+                                    Margin="10,0,10,5"
+                                    Grid.Column="1">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" 
+                                                CornerRadius="5" 
+                                                Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

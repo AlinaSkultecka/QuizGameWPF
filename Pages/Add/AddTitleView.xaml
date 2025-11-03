@@ -41,7 +41,7 @@
                     <Grid Grid.Row="0" Grid.ColumnSpan="2">
                         <TextBox 
                 TextWrapping="Wrap" 
-                Text="Add new quiz" 
+                Text="Add new Quiz" 
                 FontSize="20"
                 FontWeight="Bold" 
                 VerticalAlignment="Center" 
@@ -54,7 +54,7 @@
                     <Grid Grid.Row="1" Margin="20,5,20,5" Grid.ColumnSpan="2">
                         <TextBox 
                 TextWrapping="Wrap" 
-                Text="Enter your quiz title" 
+                Text="Enter your Quiz title" 
                 FontWeight="Bold" 
                 FontSize="14"
                 VerticalAlignment="Center" 

@@ -42,18 +42,18 @@
                     TextWrapping="Wrap" 
                     Margin="30"
                     TextAlignment="Center"
-                    Text="Choose the quiz you want to play" 
+                    Text="Choose the Quiz you want to play" 
                     FontSize="22"
                     FontWeight="Bold" 
                     VerticalAlignment="Bottom" 
                     HorizontalAlignment="Center" 
-                    BorderThickness="0"
+                    BorderThickness="0" TextChanged="TextBox_TextChanged"
                     />
                     </Grid>
 
                     <!-- GBG quiz row -->
                     <Grid Grid.Row="1" Margin="20,5,20,5">
-                        <Button Content="Play Gothenburg quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
+                        <Button Content="Play Gothenburg Quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="5" Background="{TemplateBinding Background}">
@@ -66,7 +66,7 @@
 
                     <!-- The rest quizes row -->
                     <Grid Grid.Row="2" Margin="20,5,20,5">
-                        <Button x:Name="PlayRandomUserQuizButton" Content="Play randome user created quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
+                        <Button x:Name="PlayRandomUserQuizButton" Content="Play randome user created Quiz" FontWeight="Bold" FontSize ="14" Click="PlayRandomeUserQuiz_Click">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="5" Background="{TemplateBinding Background}">

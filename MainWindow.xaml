@@ -7,7 +7,7 @@
         Background="LightBlue">
 
     <Grid>
-        <!-- This ContentControl will host either MainMenuView or PlayQuizView -->
+        <!-- This ContentControl will host different views/pages -->
         <ContentControl x:Name="MainContent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>

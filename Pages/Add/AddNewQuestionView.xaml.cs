@@ -54,7 +54,7 @@ namespace QuizGameWPF
             {
                 ID = currentQuiz.Questions.Count + 1,
                 QuestionText = questionText,
-                Answers = new string[] { answer1, answer2, answer3 },
+                Answers = new List<string> { answer1, answer2, answer3 },
                 CorrectAnswerIndex = correctIndex - 1,
                 CreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
                 Category = "User's question"
@@ -109,7 +109,7 @@ namespace QuizGameWPF
             {
                 ID = currentQuiz.Questions.Count + 1,
                 QuestionText = questionText,
-                Answers = new string[] { answer1, answer2, answer3 },
+                Answers = new List<string> { answer1, answer2, answer3 },
                 CorrectAnswerIndex = correctIndex - 1,
                 CreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
                 Category = "User's question"

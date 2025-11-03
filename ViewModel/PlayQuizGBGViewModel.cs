@@ -65,7 +65,7 @@ namespace QuizGameWPF.ViewModel
                 {
                     MessageBox.Show("Question file not found.");
                     Quiz = new Quiz("Test Quiz (Default)");
-                    Quiz.AddQuestion("Fallback: What is 2+2?", 1, "3", "4", "5");
+                    Quiz.AddQuestion("Fallback: What is 2+2?", 1, new List<string> { "3", "4", "5" }); 
                     CurrentQuestion = Quiz.GetRandomeQuestion();
                 }
             }

@@ -1,6 +1,6 @@
 # Quiz Game Gothenburg
 
-A graphical **Quiz Game** built with C#.  
+A graphical **Quiz Game** built with C# and WPF (XAML UI).  
 Players can **play**, **edit**, or **create** quiestions — all through separate views using `UserControls`.
 
 
@@ -14,7 +14,16 @@ Players can **play**, **edit**, or **create** quiestions — all through separat
 
 - ✏️ **Edit Mode:**  
   View all questions in a quiz, select one, and modify its text or answer options.
+  Delete a question directly. If a quiz has no questions left, you’ll be asked if you want to delete the entire quiz or keep it empty.
 
 - 🧠 **Create Mode:**  
-  Create new questions, add as many questions as you like,  
-  mark the correct answer, and save them as **JSON**.
+  Create new questions, add as many questions as you like, mark the correct answer, and save them as **JSON**.
+
+- 💾 **JSON Data:**
+  All quizzes and questions are saved and loaded from JSON files in your local AppData.
+
+  
+### Sources
+
+- The questions about Gothenburg are taken from Höglund, B. (2023). GöteborgQuiz 2 : Har du koll på Göteborg? Ordalaget Bokförlag.
+

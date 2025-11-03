@@ -47,5 +47,10 @@ namespace QuizGameWPF.Pages.Play
             if (mainWindow != null)
                 mainWindow.MainContent.Content = new PlayRandomeUserQuizView();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

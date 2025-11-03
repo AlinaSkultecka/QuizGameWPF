@@ -48,7 +48,7 @@ namespace QuizGameWPF.Models
             return next;
         }
 
-        public void AddQuestion(string questionText, int correctAnswerIndex, params string[] answers)
+        public void AddQuestion(string questionText, int correctAnswerIndex, List<string> answers)
         {
             var q = new Questions
             {
@@ -63,11 +63,5 @@ namespace QuizGameWPF.Models
 
             Questions.Add(q);
         }
-
-        //public void RemoveQuestion(int index)
-        //{
-
-        //}
-
     }
 }

@@ -12,8 +12,11 @@
     <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
         <Grid>
             <Grid.RowDefinitions>
+                <!-- Heading row-->
                 <RowDefinition Height="180"/>
+                <!-- Text row-->
                 <RowDefinition Height="50"/>
+                <!-- Input area row-->
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -28,13 +31,13 @@
                          BorderThickness="0" />
             </Grid>
 
-            <!-- Heading -->
+            <!-- Name text row -->
             <Grid Grid.Row="1">
                 <TextBlock Text="What is your name:" 
-                   FontSize ="14"       
-                   FontWeight="Bold" 
-                   VerticalAlignment="Bottom" 
-                   HorizontalAlignment="Center"/>
+                           FontSize ="14"       
+                           FontWeight="Bold" 
+                           VerticalAlignment="Bottom" 
+                           HorizontalAlignment="Center"/>
             </Grid>
 
             <!-- Name input area -->
@@ -56,24 +59,24 @@
 
                             <!-- Placeholder text -->
                             <TextBlock x:Name="PlaceholderText"
-                               Text="Enter your name..."
-                               Foreground="Gray"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               IsHitTestVisible="False"
-                               Visibility="Visible"/>
+                                       Text="Enter your name..."
+                                       Foreground="Gray"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       IsHitTestVisible="False"
+                                       Visibility="Visible"/>
                         </Grid>
                     </Border>
 
                     <!-- Rounded button -->
                     <Button Content="Confirm"
-                    Width="100" Height="30"
-                    Margin="0,10,0,0"
-                    Background="LightGray"
-                    FontWeight="Bold"       
-                    Foreground="Black"
-                    BorderThickness="0"
-                    Click="Confirm_Click">
+                            Width="100" Height="30"
+                            Margin="0,10,0,0"
+                            Background="LightGray"
+                            FontWeight="Bold"       
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Click="Confirm_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="10"
@@ -84,11 +87,11 @@
                         </Button.Template>
                     </Button>
 
-                    <!-- Greeting text -->
-                    <TextBlock x:Name="GreetingText"
-                       FontSize="16"
-                       Margin="0,10,0,0"
-                       HorizontalAlignment="Center"/>
+                    <!-- Greeting text ("Please enter your name") -->
+                    <TextBlock x:Name="GreetingText"  
+                               FontSize="16"
+                               Margin="0,10,0,0"
+                               HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
         </Grid>

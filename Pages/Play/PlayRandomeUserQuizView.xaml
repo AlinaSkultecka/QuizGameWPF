@@ -11,7 +11,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <!-- Return to menu row-->
             <RowDefinition Height="50"/>
+            <!-- Content row-->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 

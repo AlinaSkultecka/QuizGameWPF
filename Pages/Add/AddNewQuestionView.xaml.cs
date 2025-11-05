@@ -21,9 +21,6 @@ using QuizGameWPF.ViewModel;
 
 namespace QuizGameWPF
 {
-    /// <summary>
-    /// Interaction logic for AddNewQuestion.xaml
-    /// </summary>
     public partial class AddNewQuestion : UserControl
     {
         private Quiz currentQuiz;
@@ -38,7 +35,6 @@ namespace QuizGameWPF
             var mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow?.ShowMainMenu(); // This returns to MainMenuView
         }
-
 
         private void SaveQuestion_Click(object sender, RoutedEventArgs e)
         {
@@ -60,6 +56,7 @@ namespace QuizGameWPF
                 Category = "User's question"
             };
 
+            // If user's input is invalid, show message and return
             if (string.IsNullOrWhiteSpace(questionText) ||
                 string.IsNullOrWhiteSpace(answer1) ||
                 string.IsNullOrWhiteSpace(answer2) ||
@@ -72,7 +69,7 @@ namespace QuizGameWPF
 
             currentQuiz.Questions.Add(newQuestion);
 
-            // Optionally, inform the user
+            // Inform the user
             MessageBox.Show("Question added!");
 
             // Clear for next

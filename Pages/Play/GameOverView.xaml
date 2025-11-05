@@ -11,9 +11,13 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <!-- Return to menu row-->
             <RowDefinition Height="50"/>
+            <!-- Content row-->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <!-- Return to menu row-->
         <Grid Grid.Row="0" Background="White">
             <Button Content="Return to Menu" 
                     VerticalAlignment="Center" 
@@ -25,13 +29,19 @@
                     Click="ReturnToMenu_Click" Height="20"
                     />
         </Grid>
+
+        <!-- Content row-->
         <Grid Grid.Row="1">
             <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
                 <Grid>
                     <Grid.RowDefinitions>
+                        <!-- Heading row-->
                         <RowDefinition Height="150"/>
+                        <!-- Score row-->
                         <RowDefinition Height="50"/>
+                        <!-- GBG quiz row-->
                         <RowDefinition Height="50"/>
+                        <!-- The rest quizes row-->
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
 
@@ -67,7 +77,7 @@
 
                     <!-- GBG quiz row -->
                     <Grid Grid.Row="2" Margin="20,5,20,5">
-                        <Button Content="Play again Gothenburg Quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
+                        <Button x:Name="PlayGBGQuizButton" Content="Play again Gothenburg Quiz" FontWeight="Bold" FontSize ="14" Click="PlayGBGQuiz_Click">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="5" Background="{TemplateBinding Background}">

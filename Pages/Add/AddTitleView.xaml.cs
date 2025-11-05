@@ -19,16 +19,13 @@ using System.Windows.Shapes;
 
 namespace QuizGameWPF.Pages.Add
 {
-    /// <summary>
-    /// Interaction logic for AddTitle.xaml
-    /// </summary>
     public partial class AddTitle : UserControl
     {
-        public PlayQuizGBGViewModel ViewModel { get; set; }
+        public PlayRandomeUserQuizViewModel ViewModel { get; set; } 
         public AddTitle()
         {
             InitializeComponent();
-            ViewModel = new PlayQuizGBGViewModel();
+            ViewModel = new PlayRandomeUserQuizViewModel();
             DataContext = ViewModel;
         }
 
@@ -49,7 +46,7 @@ namespace QuizGameWPF.Pages.Add
                 return;
             }
 
-            // Pass this title to the next window (where you add questions)
+            // Pass this title to the next window (where I add questions)
             var addQuestionsPage = new AddNewQuestion(title);
 
             var mainWindow = Application.Current.MainWindow as MainWindow;

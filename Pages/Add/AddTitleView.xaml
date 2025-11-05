@@ -5,15 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuizGameWPF.Pages.Add"
              mc:Ignorable="d" 
-                      d:DesignHeight="640" 
-         d:DesignWidth="360" 
-         Background="LightBlue">
+             d:DesignHeight="640" 
+             d:DesignWidth="360" 
+             Background="LightBlue">
 
     <Grid>
         <Grid.RowDefinitions>
+            <!-- Return to menu row-->
             <RowDefinition Height="50"/>
+            <!-- Content row-->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+       
+        <!-- Return to menu row-->
         <Grid Grid.Row="0" Background="White">
             <Button Content="Return to Menu" 
                 VerticalAlignment="Center" 
@@ -25,55 +29,58 @@
                 Click="ReturnToMenu_Click" Height="20"
                 />
         </Grid>
+        
+        <!-- Content row-->
         <Grid Grid.Row="1">
-
             <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
                 <Grid>
                     <Grid.RowDefinitions>
+                        <!-- Heading row-->
                         <RowDefinition Height="150"/>
+                        <!-- Question rows-->
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="50"/>
-                        <RowDefinition Height="Auto"/>
+                        <!-- Save button row-->
                         <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
 
                     <!-- Heading row-->
                     <Grid Grid.Row="0" Grid.ColumnSpan="2">
                         <TextBox 
-                TextWrapping="Wrap" 
-                Text="Add new Quiz" 
-                FontSize="20"
-                FontWeight="Bold" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center" 
-                BorderThickness="0" 
-                />
+                            TextWrapping="Wrap" 
+                            Text="Add new Quiz" 
+                            FontSize="22"
+                            FontWeight="Bold" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center" 
+                            BorderThickness="0"
+                            />
                     </Grid>
 
                     <!-- Question row-->
                     <Grid Grid.Row="1" Margin="20,5,20,5" Grid.ColumnSpan="2">
                         <TextBox 
-                TextWrapping="Wrap" 
-                Text="Enter your Quiz title" 
-                FontWeight="Bold" 
-                FontSize="14"
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Left" 
-                BorderThickness="0" 
-                />
+                            TextWrapping="Wrap" 
+                            Text="Enter your Quiz title" 
+                            FontWeight="Bold" 
+                            FontSize="14"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left" 
+                            BorderThickness="0" 
+                            />
                     </Grid>
 
                     <!-- Question entrance row -->
                     <Grid Grid.Row="2" Margin="20,5,20,5" Grid.ColumnSpan="2">
                         <TextBox 
-                x:Name="TitleTextBox"
-                TextWrapping="Wrap" 
-                Text=""
-                FontSize="14"
-                Margin="0"
-                Height="40"
-                Padding="8"
-                Background="LightGray">
+                            x:Name="TitleTextBox"
+                            TextWrapping="Wrap" 
+                            Text=""
+                            FontSize="14"
+                            Margin="0"
+                            Height="40"
+                            Padding="8"
+                            Background="LightGray">
                             <TextBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5"/>
@@ -83,20 +90,20 @@
                     </Grid>
 
                     <!-- Save button Row-->
-                    <Grid Grid.Row="8" Margin="20,10,20,5">
+                    <Grid Grid.Row="3" Margin="20,10,20,5">
                         <Button Content="Save"
-            FontSize="14"
-            VerticalAlignment="Top" 
-            Background="LightGray" 
-            BorderThickness="0" 
-            FontWeight="Bold" 
-            Click="SaveQuizTitle_Click" 
-            Height="30" Margin="100,0,100,0">
+                                FontSize="14"
+                                VerticalAlignment="Top" 
+                                Background="LightGray" 
+                                BorderThickness="0" 
+                                FontWeight="Bold" 
+                                Click="SaveQuizTitle_Click" 
+                                Height="30" Margin="100,0,100,0">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border Background="{TemplateBinding Background}" 
-            CornerRadius="5" 
-            Padding="{TemplateBinding Padding}">
+                                            CornerRadius="5" 
+                                            Padding="{TemplateBinding Padding}">
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
                                 </ControlTemplate>

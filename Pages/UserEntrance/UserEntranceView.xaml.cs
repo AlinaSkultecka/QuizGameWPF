@@ -45,7 +45,6 @@ namespace QuizGameWPF.Pages.UserEntrance
             }
         }
 
-        // Optionally, handle TextChanged for placeholder logic...
         private void NameInput_TextChanged(object sender, TextChangedEventArgs e)
         {
             PlaceholderText.Visibility = string.IsNullOrWhiteSpace(NameInput.Text)

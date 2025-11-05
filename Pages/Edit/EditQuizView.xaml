@@ -11,10 +11,13 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <!-- Return to menu row-->
             <RowDefinition Height="50"/>
+            <!-- Content row-->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
+        <!-- Return to menu row-->
         <Grid Grid.Row="0" Background="White">
             <Button Content="Return to Menu" 
                 VerticalAlignment="Center" 
@@ -27,22 +30,29 @@
                 />
         </Grid>
 
+        <!-- Content row-->
         <Grid Grid.Row="1">
             <Border Margin="15,15,15,15" CornerRadius="10" Background="White">
                 <Grid>
                     <Grid.RowDefinitions>
+                        <!-- Heading row-->
                         <RowDefinition Height="*"/>
+                        <!-- Choose the quiz row-->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Choose Question row -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Edit Title and question rows-->
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <!-- Answers rows-->
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <!-- Buttons row-->
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
@@ -59,7 +69,7 @@
                             />
                     </Grid>
                    
-                    <!-- Choose the quiz row-->
+                    <!-- Choose Quiz row-->
                     <Grid Grid.Row="1" Margin="20,5,20,0">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -109,7 +119,7 @@
                         </Grid>
                     </Grid>
 
-                    <!-- Question row-->
+                    <!-- Quiz title row-->
                     <Grid Grid.Row="3" Margin="20,15,20,0">
                         <TextBox 
                                 TextWrapping="Wrap" 
@@ -122,7 +132,7 @@
                                 />
                     </Grid>
 
-                    <!-- Question entrance row -->
+                    <!-- Editing the tilte row -->
                     <Grid Grid.Row="4" Margin="20,0,20,0">
                         <TextBox 
                             x:Name="QuizTitleTextBox"
@@ -154,7 +164,7 @@
                             />
                     </Grid>
 
-                    <!-- Question entrance row -->
+                    <!-- Editing question  row -->
                     <Grid Grid.Row="6" Margin="20,0,20,0">
                         <TextBox 
                             x:Name="QuestionTextBox"
@@ -173,7 +183,7 @@
                         </TextBox>
                     </Grid>
 
-                    <!-- Answers Row-->
+                    <!-- Answer text Row-->
                     <Grid Grid.Row="7" Margin="20,10,20,0">
                         <TextBox 
                             TextWrapping="Wrap" 
@@ -188,17 +198,19 @@
 
                     <!--1st Answer row -->
                     <Grid Grid.Row="8" Margin="20,5,20,0" Grid.ColumnSpan="2" >
+                        
                         <Grid.ColumnDefinitions>
-                            <!-- Number column -->
-                            <ColumnDefinition Width="30"/>
-                            <!-- TextBox column -->
-                            <ColumnDefinition Width="*"/>
+                                <!-- Number column -->
+                                <ColumnDefinition Width="30"/>
+                                <!-- TextBox column -->
+                                <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                       
                         <TextBlock Text="1." 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center"
-                               FontWeight="Bold"
-                               />
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"
+                                   />
                         <TextBox 
                                 x:Name="Answer1Box"
                                 Grid.Column="1"
@@ -219,6 +231,7 @@
 
                     <!--2nd Answer row -->
                     <Grid Grid.Row="9" Margin="20,5,20,0" Grid.ColumnSpan="2">
+                        
                         <Grid.ColumnDefinitions>
                             <!-- Number column -->
                             <ColumnDefinition Width="30"/>
@@ -227,11 +240,11 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Text="2." 
-                               FontSize="14"
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center"
-                               FontWeight="Bold"
-                               />
+                                   FontSize="14"
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"
+                                   />
                         <TextBox 
                                 x:Name="Answer2Box"
                                 Grid.Column="1"
@@ -252,6 +265,7 @@
 
                     <!--3rd Answer row -->
                     <Grid Grid.Row="10" Margin="20,5,20,0" Grid.ColumnSpan="2">
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="30"/>
                             <!-- Number column -->
@@ -260,11 +274,11 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Text="3." 
-                               FontSize="14"
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center"
-                               FontWeight="Bold"
-                               />
+                                   FontSize="14"
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"
+                                   />
                         <TextBox 
                                 x:Name="Answer3Box"
                                 Grid.Column="1"
@@ -285,12 +299,14 @@
 
                     <!-- Correct answer row -->
                     <Grid Grid.Row="11" Margin="20,5,20,0" Grid.ColumnSpan="2">
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="170"/>
                             <!-- Number column -->
                             <ColumnDefinition Width="*"/>
                             <!-- TextBox column -->
                         </Grid.ColumnDefinitions>
+                        
                         <TextBlock Text="Enter the index number of the correct answer:"
                                    TextWrapping="Wrap"
                                    FontSize="14"
@@ -316,10 +332,14 @@
                         </TextBox>
                     </Grid>
 
+                    <!-- Buttons row-->
                     <Grid Grid.Row="12" Margin="20,10,20,5">
                         <Grid>
+                            
                             <Grid.ColumnDefinitions>
+                                <!-- Save button row-->
                                 <ColumnDefinition Width="*" />
+                                <!-- Delete button row-->
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
@@ -366,7 +386,6 @@
                             </Button>
                         </Grid>
                     </Grid>
-
                 </Grid>
             </Border>
         </Grid>

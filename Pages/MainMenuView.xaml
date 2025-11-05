@@ -14,15 +14,19 @@
         <Border Margin="15,110,15,110" CornerRadius="10" Background="White">
             <Grid>
                 <Grid.RowDefinitions>
+                    <!-- Heading Welcome row-->
                     <RowDefinition Height="140"/>
+                    <!-- Heading What to do row-->
                     <RowDefinition Height="60"/>
+                    <!-- Play row -->
                     <RowDefinition Height="50"/>
+                    <!-- Edit quiz row -->
                     <RowDefinition Height="50"/>
+                    <!-- Add new quiz row-->
                     <RowDefinition Height="50"/>
+                    <!-- Empty row-->
                     <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
-
-                
 
                 <!-- Heading Welcome row-->
                 <Grid Grid.Row="0">
@@ -58,7 +62,7 @@
                     </Button>
                 </Grid>
 
-                <!-- Edit question row -->
+                <!-- Edit quiz row -->
                 <Grid Grid.Row="3" Margin="20,5,20,5">
                     <Button Content="Edit existing Quiz" FontWeight="Bold" FontSize ="14" Click="Edit_Question_Click">
                         <Button.Template>
@@ -71,7 +75,7 @@
                     </Button>
                 </Grid>
 
-                <!-- Add new question row -->
+                <!-- Add new quiz row -->
                 <Grid Grid.Row="4" Margin="20,5,20,5">
                     <Button Content="Add new Quiz" FontWeight="Bold" FontSize ="14" Click="Add_Question_Click">
                         <Button.Template>
@@ -83,7 +87,6 @@
                         </Button.Template>
                     </Button>
                 </Grid>
-
             </Grid>
         </Border>
     </Grid>

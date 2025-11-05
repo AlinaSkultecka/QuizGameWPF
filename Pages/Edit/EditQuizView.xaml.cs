@@ -123,7 +123,6 @@ namespace QuizGameWPF
                 currentQuestion.Answers = new List<string> { answer1, answer2, answer3 };
                 currentQuestion.CorrectAnswerIndex = correctIndex - 1; // 0-based
                 currentQuestion.EditedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                // Optionally update other fields, like ImagePath or Category if your UI supports it
             }
             else
             {
@@ -190,7 +189,7 @@ namespace QuizGameWPF
 
                 MessageBox.Show("Question deleted!");
 
-                // New logic: If no questions are left, ask about deleting the quiz
+                // If no questions are left, ask about deleting the quiz
                 if (currentQuiz.Questions.Count == 0)
                 {
                     var quizDeleteResult = MessageBox.Show(
@@ -215,7 +214,6 @@ namespace QuizGameWPF
                     else
                     {
                         MessageBox.Show("Quiz kept, but is now empty.");
-                        // Optionally clear question selection/UI here as well
                     }
                 }
             }

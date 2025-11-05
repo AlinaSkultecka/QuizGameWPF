@@ -30,7 +30,7 @@ namespace QuizGameWPF.Helpers
                 if (string.IsNullOrWhiteSpace(json))
                     allQuizzes = new List<Quiz>();
                 else
-                    allQuizzes = JsonSerializer.Deserialize<List<Quiz>>(json) ?? new List<Quiz>();
+                    allQuizzes = JsonSerializer.Deserialize<List<Quiz>>(json) ?? new List<Quiz>();  // Deserialize - from JSON string to object
             }
             else
             {
@@ -49,8 +49,8 @@ namespace QuizGameWPF.Helpers
             allQuizzes.Add(quiz);
 
             // Save back to file
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string updatedJson = JsonSerializer.Serialize(allQuizzes, options);
+            var options = new JsonSerializerOptions { WriteIndented = true };  // Options for pretty printing
+            string updatedJson = JsonSerializer.Serialize(allQuizzes, options);   // Serialize - from object to JSON string
             File.WriteAllText(filePath, updatedJson);
         }
     }

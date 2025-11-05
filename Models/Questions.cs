@@ -18,14 +18,14 @@ namespace QuizGameWPF.Models
         public int CorrectAnswerIndex { get; set; }
         public string? ImagePath { get; set; }
 
-        public string AbsoluteImagePath
+        public string AbsoluteImagePath   // I use this property at Play Quiz WPF
         {
             get
             {
                 // Handle missing or empty ImagePath
                 string fileName = ImagePath ?? "";
 
-                // If your JSON is "DefaultData/Images/23.png", strip the prefix:
+                // If JSON is "DefaultData/Images/23.png", strip the prefix:
                 if (fileName.StartsWith("DefaultData/Images/", StringComparison.OrdinalIgnoreCase))
                     fileName = fileName.Substring("DefaultData/Images/".Length);
 

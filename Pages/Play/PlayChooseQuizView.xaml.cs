@@ -4,9 +4,6 @@ using System.Windows.Controls;
 
 namespace QuizGameWPF.Pages.Play
 {
-    /// <summary>
-    /// Interaction logic for PlayChooseQuiz.xaml
-    /// </summary>
     public partial class PlayChooseQuizView : UserControl
     {
         public PlayQuizGBGViewModel ViewModelGBG { get; set; }
@@ -46,11 +43,6 @@ namespace QuizGameWPF.Pages.Play
             var mainWindow = Application.Current.MainWindow as MainWindow;
             if (mainWindow != null)
                 mainWindow.MainContent.Content = new PlayRandomeUserQuizView();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

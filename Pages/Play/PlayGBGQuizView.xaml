@@ -11,22 +11,26 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <!-- Return to menu row-->
             <RowDefinition Height="50"/>
+            <!-- Content row-->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-       
+
+        <!-- Return to menu row-->
         <Grid Grid.Row="0" Background="White" Grid.ColumnSpan="2">
             <Button Content="Return to Menu" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Right"
-                Background="White" 
-                BorderThickness="0" 
-                FontWeight="Bold" 
-                Margin="0,0,10,0"
-                Click="ReturnToMenu_Click" Height="20"
-                />
-
-            <Border Margin="10,10,150,0"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Right"
+                    Background="White" 
+                    BorderThickness="0" 
+                    FontWeight="Bold" 
+                    Margin="0,0,10,0"
+                    Click="ReturnToMenu_Click" Height="20"
+                    />
+            
+            <!-- Game Score-->
+            <Border  Margin="10,10,150,0"
                      VerticalAlignment="Top"
                      Height="28" 
                      CornerRadius="10" 
@@ -42,117 +46,122 @@
                      />
             </Border>
         </Grid>
-        
+
+        <!-- Content row-->
         <Grid Grid.Row="1">
             <Grid>
                 <Border Margin="15,15,15,15" CornerRadius="10" Background="White">
-
                     <Grid>
-                        <!--Rows for quiz sections-->
                         <Grid.RowDefinitions>
+                            <!-- Quiz title row-->
                             <RowDefinition Height="50"/>
+                            <!-- QUestion category row-->
                             <RowDefinition Height="40"/>
+                            <!-- Image row-->
                             <RowDefinition Height="*"/>
+                            <!-- Question row-->
                             <RowDefinition Height="100"/>
-                            <RowDefinition Height="Auto"/>
+                            <!-- Answers row-->
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <!-- Heading Question Number row-->
-                        <Grid Grid.Row="0" Margin="5,15,5,5" Grid.ColumnSpan="2">
+                        <!-- Quiz title row-->
+                        <Grid Grid.Row="0" Margin="5,15,5,5" >
                             <TextBox 
-                         TextWrapping="Wrap" 
-                         Text="{Binding QuizTitle, Mode=OneWay}" 
-                         IsReadOnly="True"
-                         FontSize="18"
-                         FontWeight="Bold" 
-                         VerticalAlignment="Center" 
-                         HorizontalAlignment="Center" 
-                         BorderThickness="0" 
-                         />
+                                 TextWrapping="Wrap" 
+                                 Text="{Binding QuizTitle, Mode=OneWay}" 
+                                 IsReadOnly="True"
+                                 FontSize="18"
+                                 FontWeight="Bold" 
+                                 VerticalAlignment="Center" 
+                                 HorizontalAlignment="Center" 
+                                 BorderThickness="0" 
+                                 />
                         </Grid>
 
                         <!-- Heading Question Number row-->
-                        <Grid Grid.Row="1" Margin="5,5,5,5" Grid.ColumnSpan="2">
+                        <Grid Grid.Row="1" Margin="5,5,5,5">
                             <TextBox 
-                     TextWrapping="Wrap" 
-                     Text="{Binding Category, Mode=OneWay}" 
-                     IsReadOnly="True"
-                     FontSize="14"
-                     FontWeight="Bold" 
-                     VerticalAlignment="Center" 
-                     HorizontalAlignment="Center" 
-                     BorderThickness="0" 
-                     />
+                                 TextWrapping="Wrap" 
+                                 Text="{Binding Category, Mode=OneWay}" 
+                                 IsReadOnly="True"
+                                 FontSize="14"
+                                 FontWeight="Bold" 
+                                 VerticalAlignment="Center" 
+                                 HorizontalAlignment="Center" 
+                                 BorderThickness="0" 
+                                 />
                         </Grid>
 
                         <!-- Picture row -->
-                        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                        <Grid Grid.Row="2">
                             <Image
                                Source="{Binding CurrentQuestion.AbsoluteImagePath}" 
                                Stretch="Uniform"/>
                         </Grid>
 
                         <!-- Question row -->
-                        <Grid Grid.Row="3" Margin="20,10,20,8" Grid.ColumnSpan="2">
+                        <Grid Grid.Row="3" Margin="20,10,20,8">
                             <TextBlock 
-                     Text="{Binding CurrentQuestion.QuestionText}" 
-                     TextWrapping="Wrap" 
-                     TextAlignment="Center"
-                     FontWeight="Bold"
-                     FontSize="15"
-                     Foreground="Black"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
-                 />
+                                 Text="{Binding CurrentQuestion.QuestionText}" 
+                                 TextWrapping="Wrap" 
+                                 TextAlignment="Center"
+                                 FontWeight="Bold"
+                                 FontSize="15"
+                                 Foreground="Black"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 />
                         </Grid>
 
                         <!-- Answers row -->
-                        <StackPanel Grid.Row="4" Margin="20,8,20,8" Grid.ColumnSpan="2">
-
+                        <StackPanel Grid.Row="4" Margin="20,8,20,8">
+                            <!-- 1st answer button -->
                             <Button
-                     x:Name="AnswerButton" 
-                     Content="{Binding CurrentQuestion.Answers[0]}"
-                     Height="40" 
-                     Margin="0,5" 
-                     BorderThickness="0"
-                     FontSize="13"
-                     FontWeight="Bold"
-                     Click="AnswerButton_Click" Tag="0">
+                                 x:Name="AnswerButton" 
+                                 Content="{Binding CurrentQuestion.Answers[0]}"
+                                 Height="40" 
+                                 Margin="0,5" 
+                                 BorderThickness="0"
+                                 FontSize="13"
+                                 FontWeight="Bold"
+                                 Click="AnswerButton_Click" Tag="0">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
                                     </Style>
                                 </Button.Resources>
                             </Button>
-
+                            
+                            <!-- 2nd answer button -->
                             <Button 
-                     x:Name="Answer2Button" 
-                     Content="{Binding CurrentQuestion.Answers[1]}"
-                     Height="40" 
-                     Margin="0,5" 
-                     BorderThickness="0"
-                     FontSize="13"
-                     FontWeight="Bold"
-                     Click="AnswerButton_Click" 
-                     Tag="1">
+                                 x:Name="Answer2Button" 
+                                 Content="{Binding CurrentQuestion.Answers[1]}"
+                                 Height="40" 
+                                 Margin="0,5" 
+                                 BorderThickness="0"
+                                 FontSize="13"
+                                 FontWeight="Bold"
+                                 Click="AnswerButton_Click" 
+                                 Tag="1">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
                                     </Style>
                                 </Button.Resources>
                             </Button>
-
+                            
+                            <!-- 3rd answer button -->
                             <Button 
-                     x:Name="Answer3Button" 
-                     Content="{Binding CurrentQuestion.Answers[2]}"
-                     Height="40" 
-                     Margin="0,5" 
-                     BorderThickness="0"
-                     FontSize="13"
-                     FontWeight="Bold"
-                     Click="AnswerButton_Click" 
-                     Tag="2">
+                                 x:Name="Answer3Button" 
+                                 Content="{Binding CurrentQuestion.Answers[2]}"
+                                 Height="40" 
+                                 Margin="0,5" 
+                                 BorderThickness="0"
+                                 FontSize="13"
+                                 FontWeight="Bold"
+                                 Click="AnswerButton_Click" 
+                                 Tag="2">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>

@@ -18,6 +18,7 @@ namespace QuizGameWPF.Helpers
                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                 "QuizGameWPF");
 
+            // Create subfolders for structure
             string defaultData = Path.Combine(baseAppData, "DefaultData");
             string jsonFolder = Path.Combine(defaultData, "DataJSON");
             string imageFolder = Path.Combine(defaultData, "Images");
@@ -26,7 +27,7 @@ namespace QuizGameWPF.Helpers
             Directory.CreateDirectory(jsonFolder);
             Directory.CreateDirectory(imageFolder);
 
-            // Copy default quizzes from program folder to AppData
+            // Copy default quizze from program folder to AppData
             string programJsonFolder = Path.Combine(AppContext.BaseDirectory, "DefaultData", "DataJSON");
             if (Directory.Exists(programJsonFolder))
             {
@@ -51,6 +52,7 @@ namespace QuizGameWPF.Helpers
             }
         }
 
+        // Check if user-added quizzes exist
         public static bool HasUserQuizzes()
         {
             string folderPath = Path.Combine(

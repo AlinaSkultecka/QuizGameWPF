@@ -51,7 +51,7 @@ All quizzes and questions are saved and loaded from JSON files in your local App
 
 
 ### **Sources**
-The questions about Gothenburg are taken from Höglund, B. (2023). GöteborgQuiz 2 : Har du koll på Göteborg? Ordalaget Bokförlag.
+The questions about Gothenburg are taken from the book by Höglund, B. (2023). GöteborgQuiz 2 : Har du koll på Göteborg? Ordalaget Bokförlag.
 
 
 ### Wireframe of the program

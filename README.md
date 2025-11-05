@@ -29,7 +29,7 @@ While playing, questions appear in **random order**, and after each answer you�
   - ❌ Delete the quiz file, or  
   - 📂 Keep the empty quiz.
 
-####  **Create Mode:**  
+###  **Create Mode:**  
 - Lets you name a new quiz and add as many questions as you want.  
 - Each question includes **three answer choices** and one **correct answer**.  
 - Quizzes are saved asynchronously in **JSON format**.

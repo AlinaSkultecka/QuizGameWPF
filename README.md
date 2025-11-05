@@ -47,6 +47,7 @@ All quizzes and questions are saved and loaded from JSON files in your local App
 - **Enable import and export** of quizzes to share them with other users.  
 - **Improve the WPF UI** with animations and adaptive layouts.  
 - **Build a cross-platform version** using **.NET MAUI** (the app currently runs only on Windows).
+- Implemet **Add question** to a Quiz in Edit quiz mode
 
 
 ### **Sources**

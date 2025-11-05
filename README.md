@@ -5,7 +5,7 @@ Players can **play**, **edit**, or **create** quizzes — each in separate views
 
 ## Features
 
-###  🎮  **Play Mode**
+###  **Play Mode**
 Play quizzes with multiple-choice questions (three options each).  
 There are **two types of quizzes**:
 1. **Built-in “Gothenburg” Quiz**   
@@ -21,7 +21,7 @@ While playing, questions appear in **random order**, and after each answer you�
 - ✅ Total correct answers  
 - 📊 Percentage of correct answers
 
-###  ✏️ **Edit Mode:**  
+###  **Edit Mode:**  
 - Choose the quize and question in the menu to edit it.  
 - Allows modifying the quiz title and question text or any of its answers.  
 - Supports deleting individual questions.  
@@ -29,18 +29,18 @@ While playing, questions appear in **random order**, and after each answer you�
   - ❌ Delete the quiz file, or  
   - 📂 Keep the empty quiz.
 
-####  🧠 **Create Mode:**  
+####  **Create Mode:**  
 - Lets you name a new quiz and add as many questions as you want.  
 - Each question includes **three answer choices** and one **correct answer**.  
 - Quizzes are saved asynchronously in **JSON format**.
 
 
-###  💾 **JSON Data:**
+###  **JSON Data:**
 All quizzes and questions are saved and loaded from JSON files in your local AppData.
 (C:\Users\<YourName>\AppData\Local\QuizGameWPF\DefaultData\)
 
 
-### 🔮 Future Improvements
+### **Future Improvements**
 - **Translate** the app and Gothenburg quizzes into **Swedish**, and make the app available in **two languages**.  
 - **Add category filters** to play Gothenburg quizzes by topic.  
 - **Add user-related features**, such as saving each user's score and displaying a **top players leaderboard**.  
@@ -49,7 +49,7 @@ All quizzes and questions are saved and loaded from JSON files in your local App
 - **Build a cross-platform version** using **.NET MAUI** (the app currently runs only on Windows).
 
 
-### Sources
+### **Sources**
 The questions about Gothenburg are taken from Höglund, B. (2023). GöteborgQuiz 2 : Har du koll på Göteborg? Ordalaget Bokförlag.
 
 

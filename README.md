@@ -41,13 +41,13 @@ All quizzes and questions are saved and loaded from JSON files in your local App
 
 
 ### **Future Improvements**
-- **Translate** the app and Gothenburg quizzes into **Swedish**, and make the app available in **two languages**.  
-- **Add category filters** to play Gothenburg quizzes by topic.  
+- **Translate** the app and Gothenburg quiz into **Swedish**, and make the app available in **two languages**.  
+- **Add question category filters** to play Gothenburg quizzes by topic.  
 - **Add user-related features**, such as saving each user's score and displaying a **top players leaderboard**.  
 - **Enable import and export** of quizzes to share them with other users.  
 - **Improve the WPF UI** with animations and adaptive layouts.  
 - **Build a cross-platform version** using **.NET MAUI** (the app currently runs only on Windows).
-- Implemet **Add question** to a Quiz in Edit quiz mode
+- Implemet **Add question to a Quiz option** in Edit quiz mode.
 
 
 ### **Sources**
